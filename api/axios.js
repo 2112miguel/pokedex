@@ -1,7 +1,7 @@
-import Axios, { Axios } from "axios";
+import axios from "axios";
 
-const axios = Axios.create({
+const apiClient = axios.create({
   baseURL: process.env.POKE_API,
 });
 
-export default axios;
+export default apiClient;
