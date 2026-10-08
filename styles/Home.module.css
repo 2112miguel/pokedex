@@ -60,7 +60,10 @@
 .menuPanel small { color: #74808b; line-height: 1.4; letter-spacing: .03em; }
 .noResults { margin: 1rem .5rem; color: #a8b0ba; font-size: .72rem; text-align: center; }
 .pagination { display: grid; grid-template-columns: 32px 1fr 32px; align-items: center; gap: .4rem; margin: .85rem .25rem 0; color: #b7c0c8; font-size: .68rem; text-align: center; }
-.pagination button { width: 32px; height: 28px; border: 1px solid #3b4651; border-radius: 5px; background: #252d36; color: #edf1f3; font-size: 1.15rem; cursor: pointer; }
+.pagination button { display: inline-grid; width: 32px; height: 28px; place-items: center; padding: 0; border: 1px solid #3b4651; border-radius: 5px; background: #252d36; color: #edf1f3; font-size: 1.15rem; line-height: 1; cursor: pointer; }
+.pagination button { position: relative; font-size: 0; }
+.pagination button::before { position: absolute; top: 10px; left: 11px; width: 7px; height: 7px; content: ''; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(135deg); }
+.pagination button:last-child::before { left: 10px; transform: rotate(-45deg); }
 .pagination button:hover:not(:disabled) { border-color: #ef493e; background: #ef493e; }.pagination button:disabled { cursor: not-allowed; opacity: .35; }
 .brand i { position: relative; width: 28px; height: 28px; border: 0; border-radius: 7px; background: linear-gradient(145deg, #fa6359, #d93733); box-shadow: 0 0 0 3px #14181d; }
 .brand i::before { position: absolute; top: 7px; right: 6px; left: 6px; height: 3px; content: ''; border-radius: 3px; background: #fff4e9; box-shadow: 0 6px 0 #fff4e9; }
